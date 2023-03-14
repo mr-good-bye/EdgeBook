@@ -3,3 +3,4 @@ dbschema/migrations/**
 edgedb*
 todo
 .idea
+desktop.ini
