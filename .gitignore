@@ -4,3 +4,4 @@ edgedb*
 todo
 .idea
 desktop.ini
+*.pyc

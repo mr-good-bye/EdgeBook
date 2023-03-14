@@ -140,6 +140,7 @@ async def delete_user(username: str):
         return False, "No such user found"
     return True, username
 
+
 async def test():
     print('Connection Check: ', await connection_check())
     print('Login test: ', await login(*const.TEST_USER))
@@ -148,4 +149,9 @@ async def test():
 
 
 if __name__ == "__main__":
+    #  Run next ONCE to create Test User
+    # await client.query(f"""INSERT User{{
+    #        username:='{const.TEST_USER[0]}'" +
+    #        hash:='{bcrypt.hashpw(const.TEST_USER[1].encode('utf-8'),bcrypt.gensalt()).decode('utf-8')}'
+    #        }}""")
     asyncio.run(test())
